@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:46:24.286Z",
+ "updatedAt": "2026-07-18T19:47:24.294Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 18,
+   "sent": 19,
    "no_whatsapp": 8,
-   "new": 8
+   "new": 7
   }
  },
  "leads": [
@@ -63,7 +63,7 @@
    "id": 27,
    "name": "Nail bit",
    "phone": "37125445675",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
