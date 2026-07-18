@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:32:52.291Z",
- "auto": false,
+ "updatedAt": "2026-07-18T19:33:52.304Z",
+ "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
    "sent": 11,
-   "new": 21,
-   "no_whatsapp": 2
+   "no_whatsapp": 3,
+   "new": 20
   }
  },
  "leads": [
@@ -175,7 +175,7 @@
    "id": 11,
    "name": "Anri",
    "phone": "37167450091",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
