@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:40:24.252Z",
+ "updatedAt": "2026-07-18T19:41:24.258Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 14,
-   "no_whatsapp": 4,
-   "new": 16
+   "sent": 15,
+   "no_whatsapp": 5,
+   "new": 14
   }
  },
  "leads": [
@@ -112,14 +112,14 @@
    "id": 20,
    "name": "BaGira",
    "phone": "37122831315",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
    "id": 19,
    "name": "Delor",
    "phone": "37167622502",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
