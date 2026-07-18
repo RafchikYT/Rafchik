@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:43:24.273Z",
+ "updatedAt": "2026-07-18T19:44:24.276Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 16,
+   "sent": 17,
    "no_whatsapp": 7,
-   "new": 11
+   "new": 10
   }
  },
  "leads": [
@@ -84,7 +84,7 @@
    "id": 24,
    "name": "Nail Time",
    "phone": "37129221158",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
