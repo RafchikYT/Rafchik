@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:36:24.222Z",
- "auto": false,
+ "updatedAt": "2026-07-18T19:37:24.228Z",
+ "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 11,
+   "sent": 12,
    "no_whatsapp": 3,
-   "new": 20
+   "new": 19
   }
  },
  "leads": [
@@ -168,7 +168,7 @@
    "id": 12,
    "name": "Levande",
    "phone": "37127500410",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
