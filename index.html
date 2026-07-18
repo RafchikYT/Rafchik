@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>NFC-визитки для Google-отзывов</title>
+<title>Панель управления Rafchik</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,95 +13,145 @@
     --border: rgba(255, 255, 255, 0.12);
     --text: #f2f5ff; --muted: #9aa7cc;
     --gold: #ffba21; --gold-dark: #1e190a;
-    --green: #23b25a;
+    --green: #23b25a; --red: #d84a4a; --blue: #3b7ddd;
   }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
     color: var(--text);
     min-height: 100vh;
-    padding-bottom: 28px;
+    padding: 16px 16px 32px;
   }
-  .hero { position: relative; overflow: hidden; }
-  .hero img { width: 100%; display: block; }
-  .hero::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 55%, var(--bg1) 100%);
+  .wrap { max-width: 520px; margin: 0 auto; }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+  h2 {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin: 18px 0 8px;
   }
-  .wrap { padding: 0 16px; max-width: 520px; margin: 0 auto; }
-  h1 { font-size: 22px; line-height: 1.25; margin: 18px 0 6px; }
-  .sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin-bottom: 18px; }
-  .products { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 18px; padding: 12px; text-align: center;
-    display: flex; flex-direction: column; gap: 8px;
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 10px; border: 1px solid var(--border); border-radius: 14px;
+    background: var(--card); color: var(--text);
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    transition: transform 0.06s;
   }
-  .card .imgbox {
-    background: #fff; border-radius: 12px; overflow: hidden;
-    aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  .btn:active { transform: scale(0.97); }
+  .btn.green { background: var(--green); border-color: transparent; color: #fff; }
+  .btn.red { background: var(--red); border-color: transparent; color: #fff; }
+  .btn.gold { background: var(--gold); border-color: transparent; color: var(--gold-dark); }
+  .btn.wide { grid-column: 1 / -1; }
+  .row { display: flex; gap: 10px; margin-bottom: 10px; }
+  input, select, textarea {
+    flex: 1; width: 100%;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    color: var(--text); font-size: 14px; padding: 12px;
+    outline: none; appearance: none;
   }
-  .card img { max-width: 100%; max-height: 100%; object-fit: contain; }
-  .card .name { font-size: 13px; line-height: 1.3; min-height: 34px; }
-  .price {
-    align-self: center;
-    background: var(--gold); color: var(--gold-dark);
-    font-weight: 800; font-size: 18px;
-    border-radius: 999px; padding: 5px 18px;
+  textarea { resize: none; min-height: 72px; font-family: inherit; }
+  select option { background: var(--bg1); color: var(--text); }
+  .send {
+    flex: 0 0 auto; padding: 12px 18px; border: none; border-radius: 12px;
+    background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer;
   }
-  .features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-  .feat {
-    display: flex; gap: 12px; align-items: flex-start;
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 12px 14px;
+  .hint { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .toast {
+    position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+    background: rgba(0,0,0,0.75); color: #fff; font-size: 13px;
+    padding: 10px 16px; border-radius: 999px; opacity: 0; transition: opacity 0.2s;
+    pointer-events: none; white-space: nowrap;
   }
-  .feat .ic { font-size: 20px; line-height: 1.2; }
-  .feat b { display: block; font-size: 14px; margin-bottom: 2px; }
-  .feat span { font-size: 13px; color: var(--muted); line-height: 1.4; }
-  .cta {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%; padding: 15px; border: none; border-radius: 14px;
-    background: var(--green); color: #fff;
-    font-size: 16px; font-weight: 700; cursor: pointer;
-    text-decoration: none;
-  }
-  .cta.secondary { background: transparent; border: 1px solid var(--border); color: var(--text); margin-top: 10px; }
-  .note { text-align: center; color: var(--muted); font-size: 12px; margin-top: 14px; }
+  .toast.show { opacity: 1; }
 </style>
 </head>
 <body>
-  <div class="hero"><img src="promo.jpg" alt="NFC-визитки Google Review"></div>
-  <div class="wrap">
-    <h1>Больше отзывов в Google — одним касанием телефона</h1>
-    <p class="sub">Клиент прикладывает телефон к карточке — и сразу открывается страница отзыва вашего бизнеса. Без QR-кодов и поиска.</p>
+<div class="wrap">
+  <h1>🎛 Панель Rafchik</h1>
+  <p class="sub">Команда уходит боту — ответ придёт сообщением в чат.</p>
 
-    <div class="products">
-      <div class="card">
-        <div class="imgbox"><img src="stand.png" alt="NFC-подставка на стойку"></div>
-        <div class="name">Подставка на стойку «Review Us On Google»</div>
-        <div class="price">25 €</div>
-      </div>
-      <div class="card">
-        <div class="imgbox"><img src="plaque.png" alt="NFC-табличка на стол"></div>
-        <div class="name">Табличка на стол «Google Review»</div>
-        <div class="price">20 €</div>
-      </div>
-    </div>
-
-    <div class="features">
-      <div class="feat"><div class="ic">⭐</div><div><b>Отзыв за 10 секунд</b><span>Одно касание — и клиент уже на странице отзыва</span></div></div>
-      <div class="feat"><div class="ic">📈</div><div><b>Выше в Google Картах</b><span>Свежие отзывы поднимают вас в поиске — новые клиенты находят вас первыми</span></div></div>
-      <div class="feat"><div class="ic">📱</div><div><b>Работает с любым смартфоном</b><span>NFC есть в каждом современном телефоне, приложения не нужны</span></div></div>
-      <div class="feat"><div class="ic">🚀</div><div><b>Привезём и настроим</b><span>Доставка по Риге, настройка на вашу страницу Google и демонстрация — бесплатно</span></div></div>
-    </div>
-
-    <a class="cta" href="https://wa.me/37125274672?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20NFC-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D0%BE%D0%B2">💬 Написать в WhatsApp</a>
-
-    <p class="note">Рига и окрестности · Установка в день заказа</p>
+  <h2>Обзор</h2>
+  <div class="grid">
+    <button class="btn" onclick="cmd('stats')">📊 Статистика</button>
+    <button class="btn" onclick="cmd('leads')">📋 Все лиды</button>
+    <button class="btn" onclick="cmd('leads', 'new')">🆕 Новые</button>
+    <button class="btn" onclick="cmd('leads', 'replied')">💬 Ответившие</button>
+    <button class="btn" onclick="cmd('leads', 'interested')">🔥 Заинтересованные</button>
+    <button class="btn" onclick="cmd('message')">✉️ Шаблон</button>
   </div>
+
+  <h2>Автоотправка</h2>
+  <div class="grid">
+    <button class="btn green" onclick="cmd('auto', 'on')">▶️ Включить</button>
+    <button class="btn red" onclick="cmd('auto', 'off')">⏸ Выключить</button>
+  </div>
+
+  <h2>Поиск бизнесов</h2>
+  <div class="row">
+    <select id="cat">
+      <option value="cafe">Кафе</option>
+      <option value="restaurant">Рестораны</option>
+      <option value="bar">Бары</option>
+      <option value="fastfood">Фастфуд</option>
+      <option value="bakery">Пекарни</option>
+      <option value="hairdresser">Парикмахерские</option>
+      <option value="beauty">Салоны красоты</option>
+      <option value="spa">СПА</option>
+      <option value="dentist">Стоматологии</option>
+      <option value="clinic">Клиники</option>
+      <option value="gym">Фитнес-залы</option>
+      <option value="hotel">Отели</option>
+      <option value="autoservice">Автосервисы</option>
+      <option value="carwash">Автомойки</option>
+      <option value="pharmacy">Аптеки</option>
+      <option value="clothes">Магазины одежды</option>
+    </select>
+    <button class="send" onclick="cmd('search', document.getElementById('cat').value)">🔎 Искать</button>
+  </div>
+
+  <h2>Отправить лиду</h2>
+  <div class="row">
+    <input id="leadId" type="number" inputmode="numeric" placeholder="Номер лида, напр. 3">
+    <button class="send" onclick="sendLead()">📤 Отправить</button>
+  </div>
+  <p class="hint">Отправит сообщение с фото этому лиду в WhatsApp.</p>
+
+  <h2>Задача для Claude</h2>
+  <textarea id="task" placeholder="Опиши задачу — Claude выполнит на компьютере и отчитается сюда"></textarea>
+  <div class="row" style="margin-top:10px">
+    <button class="btn gold wide" onclick="sendTask()">📝 Передать Claude</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
 <script>
   const tg = window.Telegram && window.Telegram.WebApp;
   if (tg) { tg.ready(); tg.expand(); }
+
+  function toast(text) {
+    const t = document.getElementById('toast');
+    t.textContent = text;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 1800);
+  }
+
+  function push(payload) {
+    if (!tg || !tg.sendData) { toast('Откройте панель через кнопку «🎛 Панель» в боте'); return; }
+    tg.sendData(JSON.stringify(payload)); // Telegram закроет мини-апп после отправки
+  }
+
+  function cmd(c, arg) { push({ cmd: c, arg: arg || '' }); }
+
+  function sendLead() {
+    const id = document.getElementById('leadId').value.trim();
+    if (!id) { toast('Укажите номер лида'); return; }
+    push({ cmd: 'send', arg: id });
+  }
+
+  function sendTask() {
+    const text = document.getElementById('task').value.trim();
+    if (!text) { toast('Опишите задачу'); return; }
+    push({ cmd: 'task', arg: text });
+  }
 </script>
 </body>
 </html>
