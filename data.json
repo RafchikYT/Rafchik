@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:22:28.741Z",
- "auto": false,
+ "updatedAt": "2026-07-18T19:23:28.756Z",
+ "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 4,
-   "new": 28,
+   "sent": 6,
+   "new": 26,
    "no_whatsapp": 2
   }
  },
@@ -217,14 +217,14 @@
    "id": 5,
    "name": "Biosenta Beauty",
    "phone": "37129115005",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
    "id": 4,
    "name": "Aktuel",
    "phone": "37129255985",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
