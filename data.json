@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:54:24.349Z",
+ "updatedAt": "2026-07-18T19:55:24.364Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 24,
+   "sent": 25,
    "no_whatsapp": 8,
-   "new": 2
+   "new": 1
   }
  },
  "leads": [
@@ -21,7 +21,7 @@
    "id": 33,
    "name": "Kosmeta",
    "phone": "37129131122",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
