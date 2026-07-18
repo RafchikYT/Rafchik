@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:28:41.565Z",
- "auto": true,
+ "updatedAt": "2026-07-18T19:29:46.740Z",
+ "auto": false,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 10,
-   "new": 22,
+   "sent": 11,
+   "new": 21,
    "no_whatsapp": 2
   }
  },
@@ -182,7 +182,7 @@
    "id": 10,
    "name": "Nordeks masāžas",
    "phone": "37129423486",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
