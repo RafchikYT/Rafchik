@@ -1,12 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:56:24.379Z",
+ "updatedAt": "2026-07-18T19:57:24.391Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
    "sent": 25,
-   "no_whatsapp": 8,
-   "new": 1
+   "no_whatsapp": 9
   }
  },
  "leads": [
@@ -14,7 +13,7 @@
    "id": 34,
    "name": "Sunlounge",
    "phone": "37167076441",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
