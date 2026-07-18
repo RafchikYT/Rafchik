@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:20:16.277Z",
- "auto": true,
+ "updatedAt": "2026-07-18T19:21:23.074Z",
+ "auto": false,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 3,
-   "new": 29,
+   "sent": 4,
+   "new": 28,
    "no_whatsapp": 2
   }
  },
@@ -231,7 +231,7 @@
    "id": 3,
    "name": "Cremona spa",
    "phone": "37129712149",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
