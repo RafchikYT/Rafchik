@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:18:16.254Z",
- "auto": false,
+ "updatedAt": "2026-07-18T19:19:16.264Z",
+ "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 2,
-   "new": 30,
+   "sent": 3,
+   "new": 29,
    "no_whatsapp": 2
   }
  },
@@ -238,7 +238,7 @@
    "id": 2,
    "name": "Bastet",
    "phone": "37122666620",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
