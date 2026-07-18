@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:45:24.286Z",
+ "updatedAt": "2026-07-18T19:46:24.286Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 17,
-   "no_whatsapp": 7,
-   "new": 10
+   "sent": 18,
+   "no_whatsapp": 8,
+   "new": 8
   }
  },
  "leads": [
@@ -70,14 +70,14 @@
    "id": 26,
    "name": "Sunlight",
    "phone": "37125141565",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
    "id": 25,
    "name": "The Cut",
    "phone": "37167629629",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
