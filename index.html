@@ -134,9 +134,26 @@
     setTimeout(() => t.classList.remove('show'), 1800);
   }
 
+  const BOT = 'whatsappbo_bot';
+
+  function deepLinkPayload(p) {
+    // формат: cmd__arg, только [A-Za-z0-9_-], до 64 символов
+    let s = p.cmd + (p.arg ? '__' + String(p.arg) : '');
+    s = s.replace(/[^A-Za-z0-9_-]/g, '');
+    return s.slice(0, 64);
+  }
+
   function push(payload) {
-    if (!tg || !tg.sendData) { toast('Откройте панель через кнопку «🎛 Панель» в боте'); return; }
-    tg.sendData(JSON.stringify(payload)); // Telegram закроет мини-апп после отправки
+    if (!tg) { toast('Откройте панель из Telegram'); return; }
+    try { tg.sendData(JSON.stringify(payload)); } catch (e) { /* не из reply-кнопки */ }
+    // Если панель открыта через кнопку меню, sendData не доставляется и апп
+    // не закрывается — через 400мс уходим запасным путём через deep-link /start.
+    const dl = deepLinkPayload(payload);
+    if (!dl) return;
+    setTimeout(() => {
+      tg.openTelegramLink('https://t.me/' + BOT + '?start=' + dl);
+      tg.close();
+    }, 400);
   }
 
   function cmd(c, arg) { push({ cmd: c, arg: arg || '' }); }
