@@ -1,0 +1,310 @@
+{
+ "updatedAt": "2026-07-18T19:12:10.722Z",
+ "auto": false,
+ "stats": {
+  "total": 34,
+  "byStatus": {
+   "sent": 2,
+   "new": 30,
+   "no_whatsapp": 2
+  }
+ },
+ "leads": [
+  {
+   "id": 34,
+   "name": "Sunlounge",
+   "phone": "37167076441",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 33,
+   "name": "Kosmeta",
+   "phone": "37129131122",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 32,
+   "name": "A5 Nail Bar",
+   "phone": "37127151075",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 31,
+   "name": "Breeze",
+   "phone": "37124339233",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 30,
+   "name": "PRIME Beauty Clinic",
+   "phone": "37125984401",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 29,
+   "name": "MySpa",
+   "phone": "37122072898",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 28,
+   "name": "In studio",
+   "phone": "37125524162",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 27,
+   "name": "Nail bit",
+   "phone": "37125445675",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 26,
+   "name": "Sunlight",
+   "phone": "37125141565",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 25,
+   "name": "The Cut",
+   "phone": "37167629629",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 24,
+   "name": "Nail Time",
+   "phone": "37129221158",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 23,
+   "name": "Oļega Ovčarova parfimērijas darbnīca",
+   "phone": "37125492032",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 22,
+   "name": "Mon Amour",
+   "phone": "37167310990",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 21,
+   "name": "Delicate Studija",
+   "phone": "37126666613",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 20,
+   "name": "BaGira",
+   "phone": "37122831315",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 19,
+   "name": "Delor",
+   "phone": "37167622502",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 18,
+   "name": "SiviAAron Beauty",
+   "phone": "37123776740",
+   "status": "no_whatsapp",
+   "category": "beauty"
+  },
+  {
+   "id": 17,
+   "name": "Dynasty",
+   "phone": "37167553388",
+   "status": "no_whatsapp",
+   "category": "beauty"
+  },
+  {
+   "id": 16,
+   "name": "Nails by Vladlena",
+   "phone": "37128913113",
+   "status": "sent",
+   "category": "beauty"
+  },
+  {
+   "id": 15,
+   "name": "One Beauty",
+   "phone": "37124937755",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 14,
+   "name": "Ambassade de la Beaute",
+   "phone": "37127702734",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 13,
+   "name": "Marvinc",
+   "phone": "37167220557",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 12,
+   "name": "Levande",
+   "phone": "37127500410",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 11,
+   "name": "Anri",
+   "phone": "37167450091",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 10,
+   "name": "Nordeks masāžas",
+   "phone": "37129423486",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 9,
+   "name": "L.A.K.I.",
+   "phone": "37129778030",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 8,
+   "name": "Velvet",
+   "phone": "37129710071",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 7,
+   "name": "Stylistic Nails",
+   "phone": "37120008108",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 6,
+   "name": "Natush",
+   "phone": "37129170961",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 5,
+   "name": "Biosenta Beauty",
+   "phone": "37129115005",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 4,
+   "name": "Aktuel",
+   "phone": "37129255985",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 3,
+   "name": "Cremona spa",
+   "phone": "37129712149",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 2,
+   "name": "Bastet",
+   "phone": "37122666620",
+   "status": "new",
+   "category": "beauty"
+  },
+  {
+   "id": 1,
+   "name": "ТЕСТ — мой номер",
+   "phone": "37125274672",
+   "status": "sent",
+   "category": "test"
+  }
+ ],
+ "tasks": [
+  {
+   "id": 8,
+   "text": "панель никак не изменилась, сделай оформление красивее и еще сделай так чтоб я всем рулил и видел через панель только, команды только для формальности",
+   "status": "in_progress",
+   "createdAt": "2026-07-18T19:08:25.591Z",
+   "result": null
+  },
+  {
+   "id": 7,
+   "text": "ошибка отправки",
+   "status": "done",
+   "createdAt": "2026-07-18T19:06:41.031Z",
+   "result": "Тест отправки прошёл; добавлена проверка наличия WhatsApp у номера"
+  },
+  {
+   "id": 6,
+   "text": "сделай еще красивее панель, используй скиллы, анимации какий-то сделай",
+   "status": "done",
+   "createdAt": "2026-07-18T19:04:03.409Z",
+   "result": "Панель v2: каскадные анимации, haptic, сегмент автоотправки, иерархия"
+  },
+  {
+   "id": 5,
+   "text": "ошибка поиска когда делаю",
+   "status": "done",
+   "createdAt": "2026-07-18T19:01:44.725Z",
+   "result": "429 от Overpass: добавлен запасной сервер, User-Agent, ретраи. Поиск работает (96 кафе)"
+  },
+  {
+   "id": 4,
+   "text": "нету ее",
+   "status": "done",
+   "createdAt": "2026-07-18T18:58:45.080Z",
+   "result": "Панель повешена на кнопку меню (где был Магазин) + deep-link fallback"
+  },
+  {
+   "id": 3,
+   "text": "не появилось у меня панель, только магазин ( магазин можешь убрать )",
+   "status": "done",
+   "createdAt": "2026-07-18T18:58:01.172Z",
+   "result": "Кнопка Магазин убрана, панель-клавиатура отправлена в чат"
+  },
+  {
+   "id": 2,
+   "text": "да нет мини-апп, мне нужен для удобной панели с ботом для команд",
+   "status": "done",
+   "createdAt": "2026-07-18T18:50:53.809Z",
+   "result": "Мини-апп переделан в панель управления ботом"
+  },
+  {
+   "id": 1,
+   "text": "мини-апп именно сделай",
+   "status": "done",
+   "createdAt": "2026-07-18T18:35:55.782Z",
+   "result": "Мини-апп на GitHub Pages, кнопка Магазин в боте"
+  }
+ ]
+}
