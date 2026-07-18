@@ -32,7 +32,6 @@
   }
   .wrap { max-width: 520px; margin: 0 auto; }
 
-  /* --- каскадное появление секций --- */
   @keyframes rise {
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
@@ -41,43 +40,73 @@
   .d1 { animation-delay: 0.03s; } .d2 { animation-delay: 0.10s; }
   .d3 { animation-delay: 0.17s; } .d4 { animation-delay: 0.24s; }
   .d5 { animation-delay: 0.31s; } .d6 { animation-delay: 0.38s; }
-  @media (prefers-reduced-motion: reduce) {
-    .in { animation: none; opacity: 1; }
-  }
+  .d7 { animation-delay: 0.45s; }
+  @media (prefers-reduced-motion: reduce) { .in { animation: none; opacity: 1; } }
 
-  /* --- шапка --- */
-  header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
   .logo {
     width: 44px; height: 44px; border-radius: 14px; flex: 0 0 auto;
     background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
     box-shadow: 0 6px 18px rgba(77, 141, 255, 0.35);
   }
   header h1 { font-size: 18px; line-height: 1.2; }
-  header .status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-top: 3px; }
-  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+  .status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2.2s ease-out infinite; }
+  .dot.off { background: var(--faint); animation: none; }
   @keyframes pulse {
     0%, 100% { box-shadow: 0 0 0 0 rgba(34, 180, 90, 0.5); }
     50% { box-shadow: 0 0 0 5px rgba(34, 180, 90, 0); }
   }
-  .dot { animation: pulse 2.2s ease-out infinite; }
 
-  /* --- секции --- */
   h2 {
     font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
     color: var(--faint); margin: 20px 2px 8px;
+    display: flex; justify-content: space-between; align-items: center;
   }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  h2 .meta { font-weight: 600; letter-spacing: 0; text-transform: none; font-size: 11px; }
 
-  /* --- кнопки --- */
+  /* --- статистика --- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .stat {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 10px 6px; text-align: center;
+    transition: transform 0.15s ease;
+  }
+  .stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 10.5px; color: var(--muted); }
+  .stat.hot b { color: var(--gold); }
+
+  /* --- лиды --- */
+  .list { display: flex; flex-direction: column; gap: 6px; max-height: 300px; overflow-y: auto; }
+  .lead {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 13px;
+    padding: 9px 12px;
+  }
+  .lead .em { font-size: 16px; flex: 0 0 auto; }
+  .lead .nm { font-size: 13px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lead .ph { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .lead .id { margin-left: auto; font-size: 11px; color: var(--faint); flex: 0 0 auto; }
+  .empty { color: var(--faint); font-size: 13px; text-align: center; padding: 14px 0; }
+
+  /* --- задачи --- */
+  .task-row {
+    display: flex; gap: 8px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--border); border-radius: 13px;
+    padding: 9px 12px; font-size: 12.5px; line-height: 1.4;
+  }
+  .task-row .tx { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .task-row .rs { color: var(--muted); font-size: 11.5px; margin-top: 2px; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .btn {
     position: relative; overflow: hidden;
     display: flex; align-items: center; gap: 10px;
     padding: 13px 14px; border: 1px solid var(--border); border-radius: 16px;
     background: var(--card); color: var(--text);
     font-size: 13.5px; font-weight: 600; cursor: pointer; text-align: left;
-    transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+    transition: transform 0.12s ease, background 0.15s ease;
   }
   .btn:active { transform: scale(0.96); background: var(--card-hi); }
   .btn .ic {
@@ -85,23 +114,10 @@
     display: flex; align-items: center; justify-content: center; font-size: 16px;
     background: var(--blue-soft);
   }
-  .btn.big { padding: 16px 14px; font-size: 14.5px; }
-  .btn.big .ic { width: 38px; height: 38px; font-size: 19px; border-radius: 12px; }
 
-  /* блик, пробегающий по кнопке при нажатии */
-  .btn::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.10) 50%, transparent 80%);
-    transform: translateX(-120%);
-  }
-  .btn.flash::after { animation: sweep 0.5s ease; }
-  @keyframes sweep { to { transform: translateX(120%); } }
-
-  /* --- автоотправка: сегмент-переключатель --- */
   .seg {
     display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 6px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 6px;
   }
   .seg button {
     padding: 13px 10px; border: none; border-radius: 11px;
@@ -110,31 +126,28 @@
     transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
   }
   .seg button:active { transform: scale(0.96); }
-  .seg .on { background: var(--green-soft); color: #5fe08d; }
-  .seg .off { background: transparent; }
-  .seg .off:active, .seg .off:hover { background: var(--red-soft); color: #ff9b9b; }
+  .seg .on.active { background: var(--green-soft); color: #5fe08d; }
+  .seg .off.active { background: var(--red-soft); color: #ff9b9b; }
 
-  /* --- формы --- */
   .row { display: flex; gap: 8px; }
   input, select, textarea {
     flex: 1; width: 100%; min-width: 0;
     background: var(--card); border: 1px solid var(--border); border-radius: 13px;
     color: var(--text); font-size: 14px; padding: 13px 14px;
     outline: none; appearance: none;
-    transition: border-color 0.15s ease, background 0.15s ease;
+    transition: border-color 0.15s ease;
   }
-  input:focus, select:focus, textarea:focus { border-color: var(--blue); background: var(--card-hi); }
+  input:focus, select:focus, textarea:focus { border-color: var(--blue); }
   textarea { resize: none; min-height: 76px; font-family: inherit; line-height: 1.4; }
   select option { background: var(--bg1); color: var(--text); }
   .send {
     flex: 0 0 auto; padding: 0 18px; border: none; border-radius: 13px;
     background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer;
-    transition: transform 0.12s ease, filter 0.15s ease;
+    transition: transform 0.12s ease;
   }
-  .send:active { transform: scale(0.94); filter: brightness(1.15); }
+  .send:active { transform: scale(0.94); }
   .hint { color: var(--faint); font-size: 11.5px; margin-top: 6px; padding-left: 2px; }
 
-  /* --- задача для Claude --- */
   .claude {
     margin-top: 10px; width: 100%;
     display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -142,16 +155,15 @@
     background: linear-gradient(135deg, var(--gold) 0%, #ffd268 100%);
     color: var(--gold-dark); font-size: 15px; font-weight: 800; cursor: pointer;
     box-shadow: 0 8px 22px rgba(255, 186, 33, 0.25);
-    transition: transform 0.12s ease, box-shadow 0.15s ease;
+    transition: transform 0.12s ease;
   }
-  .claude:active { transform: scale(0.97); box-shadow: 0 4px 12px rgba(255, 186, 33, 0.2); }
+  .claude:active { transform: scale(0.97); }
 
   .toast {
     position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(8px);
     background: rgba(10, 14, 30, 0.92); border: 1px solid var(--border);
-    color: #fff; font-size: 13px;
-    padding: 10px 16px; border-radius: 999px; opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    color: #fff; font-size: 13px; padding: 10px 16px; border-radius: 999px;
+    opacity: 0; transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none; white-space: nowrap; z-index: 10;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -163,32 +175,35 @@
     <div class="logo">🤖</div>
     <div>
       <h1>Панель Rafchik</h1>
-      <div class="status"><span class="dot"></span>бот на связи · ответ придёт в чат</div>
+      <div class="status"><span class="dot" id="autoDot"></span><span id="autoLabel">загружаю данные…</span></div>
     </div>
   </header>
 
   <section class="in d2">
+    <h2>Статистика <span class="meta" id="updatedAt"></span></h2>
+    <div class="stats" id="stats">
+      <div class="stat"><b>—</b><span>всего</span></div>
+      <div class="stat"><b>—</b><span>новые</span></div>
+      <div class="stat"><b>—</b><span>отправлено</span></div>
+      <div class="stat hot"><b>—</b><span>ответили</span></div>
+    </div>
+  </section>
+
+  <section class="in d3">
     <h2>Автоотправка</h2>
     <div class="seg">
-      <button class="on" onclick="tap(this); cmd('auto', 'on')">▶ Включить</button>
-      <button class="off" onclick="tap(this); cmd('auto', 'off')">⏸ Выключить</button>
+      <button class="on" id="segOn" onclick="cmd('auto', 'on')">▶ Включить</button>
+      <button class="off" id="segOff" onclick="cmd('auto', 'off')">⏸ Выключить</button>
     </div>
     <p class="hint">До 30 сообщений в день, пауза 45–120 сек — безопасно для номера.</p>
   </section>
 
-  <section class="in d3">
-    <h2>Обзор</h2>
-    <div class="grid">
-      <button class="btn big" onclick="tap(this); cmd('stats')"><span class="ic">📊</span>Статистика</button>
-      <button class="btn big" onclick="tap(this); cmd('leads')"><span class="ic">📋</span>Все лиды</button>
-      <button class="btn" onclick="tap(this); cmd('leads', 'new')"><span class="ic">🆕</span>Новые</button>
-      <button class="btn" onclick="tap(this); cmd('leads', 'replied')"><span class="ic">💬</span>Ответившие</button>
-      <button class="btn" onclick="tap(this); cmd('leads', 'interested')"><span class="ic">🔥</span>Горячие</button>
-      <button class="btn" onclick="tap(this); cmd('message')"><span class="ic">✉️</span>Шаблон</button>
-    </div>
+  <section class="in d4">
+    <h2>Лиды <span class="meta" id="leadCount"></span></h2>
+    <div class="list" id="leads"><div class="empty">Загружаю…</div></div>
   </section>
 
-  <section class="in d4">
+  <section class="in d5">
     <h2>Поиск бизнесов в Риге</h2>
     <div class="row">
       <select id="cat">
@@ -213,7 +228,7 @@
     </div>
   </section>
 
-  <section class="in d5">
+  <section class="in d6">
     <h2>Отправить лиду</h2>
     <div class="row">
       <input id="leadId" type="number" inputmode="numeric" placeholder="Номер лида, напр. 3">
@@ -222,9 +237,10 @@
     <p class="hint">Уйдёт сообщение с фото и ценами в WhatsApp этого лида.</p>
   </section>
 
-  <section class="in d6">
-    <h2>Задача для Claude</h2>
-    <textarea id="task" placeholder="Опишите задачу — Claude выполнит на компьютере и отчитается в чат"></textarea>
+  <section class="in d7">
+    <h2>Задачи для Claude</h2>
+    <div class="list" id="tasks" style="max-height:220px"><div class="empty">Загружаю…</div></div>
+    <textarea id="task" style="margin-top:10px" placeholder="Новая задача — Claude выполнит и отчитается в чат"></textarea>
     <button class="claude" onclick="sendTask()">📝 Передать Claude</button>
   </section>
 </div>
@@ -234,13 +250,8 @@
   if (tg) { tg.ready(); tg.expand(); }
 
   const BOT = 'whatsappbo_bot';
-
-  function tap(el) {
-    el.classList.remove('flash');
-    void el.offsetWidth; // перезапуск анимации блика
-    el.classList.add('flash');
-    if (tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
-  }
+  const EMOJI = { new: '🆕', sent: '📤', replied: '💬', interested: '🔥', declined: '🚫', no_whatsapp: '📵' };
+  const TASK_ICON = { new: '🆕', in_progress: '⏳', done: '✅' };
 
   function toast(text) {
     const t = document.getElementById('toast');
@@ -249,8 +260,69 @@
     setTimeout(() => t.classList.remove('show'), 1800);
   }
 
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // ---------- дашборд из data.json ----------
+  async function refresh() {
+    try {
+      const r = await fetch('data.json?ts=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) throw new Error(r.status);
+      render(await r.json());
+    } catch (e) {
+      document.getElementById('autoLabel').textContent = 'нет данных (бот выключен?)';
+      document.getElementById('autoDot').classList.add('off');
+    }
+  }
+
+  function render(d) {
+    const s = d.stats.byStatus || {};
+    const stats = [
+      [d.stats.total, 'всего', ''],
+      [s.new || 0, 'новые', ''],
+      [s.sent || 0, 'отправлено', ''],
+      [(s.replied || 0) + (s.interested || 0), 'ответили', 'hot'],
+    ];
+    document.getElementById('stats').innerHTML = stats
+      .map(([v, l, c]) => `<div class="stat ${c}"><b>${v}</b><span>${l}</span></div>`)
+      .join('');
+
+    document.getElementById('autoLabel').textContent = d.auto
+      ? 'автоотправка работает'
+      : 'автоотправка выключена';
+    document.getElementById('autoDot').classList.toggle('off', !d.auto);
+    document.getElementById('segOn').classList.toggle('active', !!d.auto);
+    document.getElementById('segOff').classList.toggle('active', !d.auto);
+
+    const age = Math.max(0, Math.round((Date.now() - Date.parse(d.updatedAt)) / 60000));
+    document.getElementById('updatedAt').textContent = age < 1 ? 'обновлено только что' : `обновлено ${age} мин назад`;
+
+    const leads = d.leads || [];
+    document.getElementById('leadCount').textContent = leads.length ? `${leads.length} последних` : '';
+    document.getElementById('leads').innerHTML = leads.length
+      ? leads.map((l) =>
+          `<div class="lead"><span class="em">${EMOJI[l.status] || '▫️'}</span>` +
+          `<div style="min-width:0"><div class="nm">${esc(l.name)}</div><div class="ph">+${esc(l.phone)}</div></div>` +
+          `<span class="id">#${l.id}</span></div>`
+        ).join('')
+      : '<div class="empty">Лидов пока нет — запустите поиск ниже</div>';
+
+    const tasks = d.tasks || [];
+    document.getElementById('tasks').innerHTML = tasks.length
+      ? tasks.map((t) =>
+          `<div class="task-row"><span>${TASK_ICON[t.status] || '▫️'}</span>` +
+          `<div style="min-width:0"><div class="tx">#${t.id} ${esc(t.text)}</div>` +
+          (t.result ? `<div class="rs">↳ ${esc(t.result)}</div>` : '') + `</div></div>`
+        ).join('')
+      : '<div class="empty">Задач пока нет</div>';
+  }
+
+  refresh();
+  setInterval(refresh, 20000);
+
+  // ---------- отправка команд боту ----------
   function deepLinkPayload(p) {
-    // формат: cmd__arg, только [A-Za-z0-9_-], до 64 символов
     let s = p.cmd + (p.arg ? '__' + String(p.arg) : '');
     s = s.replace(/[^A-Za-z0-9_-]/g, '');
     return s.slice(0, 64);
@@ -258,9 +330,8 @@
 
   function push(payload) {
     if (!tg) { toast('Откройте панель из Telegram'); return; }
+    if (tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
     try { tg.sendData(JSON.stringify(payload)); } catch (e) { /* не из reply-кнопки */ }
-    // Если панель открыта через кнопку меню, sendData не доставляется и апп
-    // не закрывается — через 400мс уходим запасным путём через deep-link /start.
     const dl = deepLinkPayload(payload);
     if (!dl) return;
     setTimeout(() => {
