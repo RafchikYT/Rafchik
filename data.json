@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:47:24.294Z",
+ "updatedAt": "2026-07-18T19:48:24.303Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 19,
+   "sent": 20,
    "no_whatsapp": 8,
-   "new": 7
+   "new": 6
   }
  },
  "leads": [
@@ -56,7 +56,7 @@
    "id": 28,
    "name": "In studio",
    "phone": "37125524162",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
