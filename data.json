@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:49:24.303Z",
+ "updatedAt": "2026-07-18T19:50:24.316Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 21,
+   "sent": 22,
    "no_whatsapp": 8,
-   "new": 5
+   "new": 4
   }
  },
  "leads": [
@@ -42,7 +42,7 @@
    "id": 30,
    "name": "PRIME Beauty Clinic",
    "phone": "37125984401",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
