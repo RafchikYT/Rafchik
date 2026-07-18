@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:25:41.537Z",
- "auto": false,
+ "updatedAt": "2026-07-18T19:26:41.549Z",
+ "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 8,
-   "new": 24,
+   "sent": 9,
+   "new": 23,
    "no_whatsapp": 2
   }
  },
@@ -196,7 +196,7 @@
    "id": 8,
    "name": "Velvet",
    "phone": "37129710071",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
