@@ -6,126 +6,241 @@
 <title>Панель управления Rafchik</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   :root {
-    --bg1: #0e1630; --bg2: #1c2a54;
-    --card: rgba(255, 255, 255, 0.06);
-    --border: rgba(255, 255, 255, 0.12);
-    --text: #f2f5ff; --muted: #9aa7cc;
-    --gold: #ffba21; --gold-dark: #1e190a;
-    --green: #23b25a; --red: #d84a4a; --blue: #3b7ddd;
+    --bg1: #0b1226; --bg2: #16204a;
+    --card: rgba(255, 255, 255, 0.055);
+    --card-hi: rgba(255, 255, 255, 0.10);
+    --border: rgba(255, 255, 255, 0.10);
+    --text: #f2f5ff; --muted: #8b98c2; --faint: #5f6b94;
+    --gold: #ffba21; --gold-dark: #241d08;
+    --green: #22b45a; --green-soft: rgba(34, 180, 90, 0.14);
+    --red: #e05252; --red-soft: rgba(224, 82, 82, 0.13);
+    --blue: #4d8dff; --blue-soft: rgba(77, 141, 255, 0.14);
+    --violet: #8f7bff;
   }
+  html { background: var(--bg1); }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    background:
+      radial-gradient(120% 60% at 50% -10%, rgba(77, 141, 255, 0.16) 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
     color: var(--text);
     min-height: 100vh;
-    padding: 16px 16px 32px;
+    padding: 20px 16px 36px;
+    overflow-x: hidden;
   }
   .wrap { max-width: 520px; margin: 0 auto; }
-  h1 { font-size: 20px; margin-bottom: 4px; }
-  .sub { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+
+  /* --- каскадное появление секций --- */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .in { opacity: 0; animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+  .d1 { animation-delay: 0.03s; } .d2 { animation-delay: 0.10s; }
+  .d3 { animation-delay: 0.17s; } .d4 { animation-delay: 0.24s; }
+  .d5 { animation-delay: 0.31s; } .d6 { animation-delay: 0.38s; }
+  @media (prefers-reduced-motion: reduce) {
+    .in { animation: none; opacity: 1; }
+  }
+
+  /* --- шапка --- */
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .logo {
+    width: 44px; height: 44px; border-radius: 14px; flex: 0 0 auto;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 6px 18px rgba(77, 141, 255, 0.35);
+  }
+  header h1 { font-size: 18px; line-height: 1.2; }
+  header .status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 180, 90, 0.5); }
+    50% { box-shadow: 0 0 0 5px rgba(34, 180, 90, 0); }
+  }
+  .dot { animation: pulse 2.2s ease-out infinite; }
+
+  /* --- секции --- */
   h2 {
-    font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
-    color: var(--muted); margin: 18px 0 8px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--faint); margin: 20px 2px 8px;
   }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* --- кнопки --- */
   .btn {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 14px 10px; border: 1px solid var(--border); border-radius: 14px;
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; gap: 10px;
+    padding: 13px 14px; border: 1px solid var(--border); border-radius: 16px;
     background: var(--card); color: var(--text);
-    font-size: 14px; font-weight: 600; cursor: pointer;
-    transition: transform 0.06s;
+    font-size: 13.5px; font-weight: 600; cursor: pointer; text-align: left;
+    transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
   }
-  .btn:active { transform: scale(0.97); }
-  .btn.green { background: var(--green); border-color: transparent; color: #fff; }
-  .btn.red { background: var(--red); border-color: transparent; color: #fff; }
-  .btn.gold { background: var(--gold); border-color: transparent; color: var(--gold-dark); }
-  .btn.wide { grid-column: 1 / -1; }
-  .row { display: flex; gap: 10px; margin-bottom: 10px; }
+  .btn:active { transform: scale(0.96); background: var(--card-hi); }
+  .btn .ic {
+    width: 32px; height: 32px; border-radius: 10px; flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center; font-size: 16px;
+    background: var(--blue-soft);
+  }
+  .btn.big { padding: 16px 14px; font-size: 14.5px; }
+  .btn.big .ic { width: 38px; height: 38px; font-size: 19px; border-radius: 12px; }
+
+  /* блик, пробегающий по кнопке при нажатии */
+  .btn::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.10) 50%, transparent 80%);
+    transform: translateX(-120%);
+  }
+  .btn.flash::after { animation: sweep 0.5s ease; }
+  @keyframes sweep { to { transform: translateX(120%); } }
+
+  /* --- автоотправка: сегмент-переключатель --- */
+  .seg {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 6px;
+  }
+  .seg button {
+    padding: 13px 10px; border: none; border-radius: 11px;
+    background: transparent; color: var(--muted);
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .seg button:active { transform: scale(0.96); }
+  .seg .on { background: var(--green-soft); color: #5fe08d; }
+  .seg .off { background: transparent; }
+  .seg .off:active, .seg .off:hover { background: var(--red-soft); color: #ff9b9b; }
+
+  /* --- формы --- */
+  .row { display: flex; gap: 8px; }
   input, select, textarea {
-    flex: 1; width: 100%;
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    color: var(--text); font-size: 14px; padding: 12px;
+    flex: 1; width: 100%; min-width: 0;
+    background: var(--card); border: 1px solid var(--border); border-radius: 13px;
+    color: var(--text); font-size: 14px; padding: 13px 14px;
     outline: none; appearance: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
   }
-  textarea { resize: none; min-height: 72px; font-family: inherit; }
+  input:focus, select:focus, textarea:focus { border-color: var(--blue); background: var(--card-hi); }
+  textarea { resize: none; min-height: 76px; font-family: inherit; line-height: 1.4; }
   select option { background: var(--bg1); color: var(--text); }
   .send {
-    flex: 0 0 auto; padding: 12px 18px; border: none; border-radius: 12px;
+    flex: 0 0 auto; padding: 0 18px; border: none; border-radius: 13px;
     background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer;
+    transition: transform 0.12s ease, filter 0.15s ease;
   }
-  .hint { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .send:active { transform: scale(0.94); filter: brightness(1.15); }
+  .hint { color: var(--faint); font-size: 11.5px; margin-top: 6px; padding-left: 2px; }
+
+  /* --- задача для Claude --- */
+  .claude {
+    margin-top: 10px; width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 15px; border: none; border-radius: 14px;
+    background: linear-gradient(135deg, var(--gold) 0%, #ffd268 100%);
+    color: var(--gold-dark); font-size: 15px; font-weight: 800; cursor: pointer;
+    box-shadow: 0 8px 22px rgba(255, 186, 33, 0.25);
+    transition: transform 0.12s ease, box-shadow 0.15s ease;
+  }
+  .claude:active { transform: scale(0.97); box-shadow: 0 4px 12px rgba(255, 186, 33, 0.2); }
+
   .toast {
-    position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
-    background: rgba(0,0,0,0.75); color: #fff; font-size: 13px;
-    padding: 10px 16px; border-radius: 999px; opacity: 0; transition: opacity 0.2s;
-    pointer-events: none; white-space: nowrap;
+    position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(8px);
+    background: rgba(10, 14, 30, 0.92); border: 1px solid var(--border);
+    color: #fff; font-size: 13px;
+    padding: 10px 16px; border-radius: 999px; opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none; white-space: nowrap; z-index: 10;
   }
-  .toast.show { opacity: 1; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>🎛 Панель Rafchik</h1>
-  <p class="sub">Команда уходит боту — ответ придёт сообщением в чат.</p>
+  <header class="in d1">
+    <div class="logo">🤖</div>
+    <div>
+      <h1>Панель Rafchik</h1>
+      <div class="status"><span class="dot"></span>бот на связи · ответ придёт в чат</div>
+    </div>
+  </header>
 
-  <h2>Обзор</h2>
-  <div class="grid">
-    <button class="btn" onclick="cmd('stats')">📊 Статистика</button>
-    <button class="btn" onclick="cmd('leads')">📋 Все лиды</button>
-    <button class="btn" onclick="cmd('leads', 'new')">🆕 Новые</button>
-    <button class="btn" onclick="cmd('leads', 'replied')">💬 Ответившие</button>
-    <button class="btn" onclick="cmd('leads', 'interested')">🔥 Заинтересованные</button>
-    <button class="btn" onclick="cmd('message')">✉️ Шаблон</button>
-  </div>
+  <section class="in d2">
+    <h2>Автоотправка</h2>
+    <div class="seg">
+      <button class="on" onclick="tap(this); cmd('auto', 'on')">▶ Включить</button>
+      <button class="off" onclick="tap(this); cmd('auto', 'off')">⏸ Выключить</button>
+    </div>
+    <p class="hint">До 30 сообщений в день, пауза 45–120 сек — безопасно для номера.</p>
+  </section>
 
-  <h2>Автоотправка</h2>
-  <div class="grid">
-    <button class="btn green" onclick="cmd('auto', 'on')">▶️ Включить</button>
-    <button class="btn red" onclick="cmd('auto', 'off')">⏸ Выключить</button>
-  </div>
+  <section class="in d3">
+    <h2>Обзор</h2>
+    <div class="grid">
+      <button class="btn big" onclick="tap(this); cmd('stats')"><span class="ic">📊</span>Статистика</button>
+      <button class="btn big" onclick="tap(this); cmd('leads')"><span class="ic">📋</span>Все лиды</button>
+      <button class="btn" onclick="tap(this); cmd('leads', 'new')"><span class="ic">🆕</span>Новые</button>
+      <button class="btn" onclick="tap(this); cmd('leads', 'replied')"><span class="ic">💬</span>Ответившие</button>
+      <button class="btn" onclick="tap(this); cmd('leads', 'interested')"><span class="ic">🔥</span>Горячие</button>
+      <button class="btn" onclick="tap(this); cmd('message')"><span class="ic">✉️</span>Шаблон</button>
+    </div>
+  </section>
 
-  <h2>Поиск бизнесов</h2>
-  <div class="row">
-    <select id="cat">
-      <option value="cafe">Кафе</option>
-      <option value="restaurant">Рестораны</option>
-      <option value="bar">Бары</option>
-      <option value="fastfood">Фастфуд</option>
-      <option value="bakery">Пекарни</option>
-      <option value="hairdresser">Парикмахерские</option>
-      <option value="beauty">Салоны красоты</option>
-      <option value="spa">СПА</option>
-      <option value="dentist">Стоматологии</option>
-      <option value="clinic">Клиники</option>
-      <option value="gym">Фитнес-залы</option>
-      <option value="hotel">Отели</option>
-      <option value="autoservice">Автосервисы</option>
-      <option value="carwash">Автомойки</option>
-      <option value="pharmacy">Аптеки</option>
-      <option value="clothes">Магазины одежды</option>
-    </select>
-    <button class="send" onclick="cmd('search', document.getElementById('cat').value)">🔎 Искать</button>
-  </div>
+  <section class="in d4">
+    <h2>Поиск бизнесов в Риге</h2>
+    <div class="row">
+      <select id="cat">
+        <option value="cafe">☕ Кафе</option>
+        <option value="restaurant">🍽 Рестораны</option>
+        <option value="bar">🍸 Бары</option>
+        <option value="fastfood">🍔 Фастфуд</option>
+        <option value="bakery">🥐 Пекарни</option>
+        <option value="hairdresser">💈 Парикмахерские</option>
+        <option value="beauty">💅 Салоны красоты</option>
+        <option value="spa">🧖 СПА</option>
+        <option value="dentist">🦷 Стоматологии</option>
+        <option value="clinic">🩺 Клиники</option>
+        <option value="gym">🏋️ Фитнес-залы</option>
+        <option value="hotel">🏨 Отели</option>
+        <option value="autoservice">🔧 Автосервисы</option>
+        <option value="carwash">🚿 Автомойки</option>
+        <option value="pharmacy">💊 Аптеки</option>
+        <option value="clothes">👕 Магазины одежды</option>
+      </select>
+      <button class="send" onclick="cmd('search', document.getElementById('cat').value)">Искать</button>
+    </div>
+  </section>
 
-  <h2>Отправить лиду</h2>
-  <div class="row">
-    <input id="leadId" type="number" inputmode="numeric" placeholder="Номер лида, напр. 3">
-    <button class="send" onclick="sendLead()">📤 Отправить</button>
-  </div>
-  <p class="hint">Отправит сообщение с фото этому лиду в WhatsApp.</p>
+  <section class="in d5">
+    <h2>Отправить лиду</h2>
+    <div class="row">
+      <input id="leadId" type="number" inputmode="numeric" placeholder="Номер лида, напр. 3">
+      <button class="send" onclick="sendLead()">📤</button>
+    </div>
+    <p class="hint">Уйдёт сообщение с фото и ценами в WhatsApp этого лида.</p>
+  </section>
 
-  <h2>Задача для Claude</h2>
-  <textarea id="task" placeholder="Опиши задачу — Claude выполнит на компьютере и отчитается сюда"></textarea>
-  <div class="row" style="margin-top:10px">
-    <button class="btn gold wide" onclick="sendTask()">📝 Передать Claude</button>
-  </div>
+  <section class="in d6">
+    <h2>Задача для Claude</h2>
+    <textarea id="task" placeholder="Опишите задачу — Claude выполнит на компьютере и отчитается в чат"></textarea>
+    <button class="claude" onclick="sendTask()">📝 Передать Claude</button>
+  </section>
 </div>
 <div class="toast" id="toast"></div>
 <script>
   const tg = window.Telegram && window.Telegram.WebApp;
   if (tg) { tg.ready(); tg.expand(); }
+
+  const BOT = 'whatsappbo_bot';
+
+  function tap(el) {
+    el.classList.remove('flash');
+    void el.offsetWidth; // перезапуск анимации блика
+    el.classList.add('flash');
+    if (tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+  }
 
   function toast(text) {
     const t = document.getElementById('toast');
@@ -133,8 +248,6 @@
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 1800);
   }
-
-  const BOT = 'whatsappbo_bot';
 
   function deepLinkPayload(p) {
     // формат: cmd__arg, только [A-Za-z0-9_-], до 64 символов
