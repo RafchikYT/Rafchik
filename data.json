@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:42:24.271Z",
+ "updatedAt": "2026-07-18T19:43:24.273Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 15,
-   "no_whatsapp": 5,
-   "new": 14
+   "sent": 16,
+   "no_whatsapp": 7,
+   "new": 11
   }
  },
  "leads": [
@@ -91,21 +91,21 @@
    "id": 23,
    "name": "Oļega Ovčarova parfimērijas darbnīca",
    "phone": "37125492032",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
    "id": 22,
    "name": "Mon Amour",
    "phone": "37167310990",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
    "id": 21,
    "name": "Delicate Studija",
    "phone": "37126666613",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "beauty"
   },
   {
