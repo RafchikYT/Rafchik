@@ -1,11 +1,11 @@
 {
- "updatedAt": "2026-07-18T19:23:28.756Z",
- "auto": true,
+ "updatedAt": "2026-07-18T19:24:35.788Z",
+ "auto": false,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 6,
-   "new": 26,
+   "sent": 8,
+   "new": 24,
    "no_whatsapp": 2
   }
  },
@@ -203,14 +203,14 @@
    "id": 7,
    "name": "Stylistic Nails",
    "phone": "37120008108",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
    "id": 6,
    "name": "Natush",
    "phone": "37129170961",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
@@ -250,6 +250,13 @@
   }
  ],
  "tasks": [
+  {
+   "id": 10,
+   "text": "ладно давай вернем 45-120 секунд, чтоб точно не блокнул",
+   "status": "new",
+   "createdAt": "2026-07-18T19:24:12.692Z",
+   "result": null
+  },
   {
    "id": 9,
    "text": "давай сделаем меньше задержку между отправкой сообщения лидам, и главное проверяй есть ли уже отправленное сообщение",
