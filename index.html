@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>NFC-визитки для Google-отзывов</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg1: #0e1630; --bg2: #1c2a54;
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #f2f5ff; --muted: #9aa7cc;
+    --gold: #ffba21; --gold-dark: #1e190a;
+    --green: #23b25a;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    color: var(--text);
+    min-height: 100vh;
+    padding-bottom: 28px;
+  }
+  .hero { position: relative; overflow: hidden; }
+  .hero img { width: 100%; display: block; }
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, var(--bg1) 100%);
+  }
+  .wrap { padding: 0 16px; max-width: 520px; margin: 0 auto; }
+  h1 { font-size: 22px; line-height: 1.25; margin: 18px 0 6px; }
+  .sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin-bottom: 18px; }
+  .products { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 12px; text-align: center;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .card .imgbox {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  }
+  .card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .card .name { font-size: 13px; line-height: 1.3; min-height: 34px; }
+  .price {
+    align-self: center;
+    background: var(--gold); color: var(--gold-dark);
+    font-weight: 800; font-size: 18px;
+    border-radius: 999px; padding: 5px 18px;
+  }
+  .features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+  .feat {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 12px 14px;
+  }
+  .feat .ic { font-size: 20px; line-height: 1.2; }
+  .feat b { display: block; font-size: 14px; margin-bottom: 2px; }
+  .feat span { font-size: 13px; color: var(--muted); line-height: 1.4; }
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 15px; border: none; border-radius: 14px;
+    background: var(--green); color: #fff;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    text-decoration: none;
+  }
+  .cta.secondary { background: transparent; border: 1px solid var(--border); color: var(--text); margin-top: 10px; }
+  .note { text-align: center; color: var(--muted); font-size: 12px; margin-top: 14px; }
+</style>
+</head>
+<body>
+  <div class="hero"><img src="promo.jpg" alt="NFC-визитки Google Review"></div>
+  <div class="wrap">
+    <h1>Больше отзывов в Google — одним касанием телефона</h1>
+    <p class="sub">Клиент прикладывает телефон к карточке — и сразу открывается страница отзыва вашего бизнеса. Без QR-кодов и поиска.</p>
+
+    <div class="products">
+      <div class="card">
+        <div class="imgbox"><img src="stand.png" alt="NFC-подставка на стойку"></div>
+        <div class="name">Подставка на стойку «Review Us On Google»</div>
+        <div class="price">25 €</div>
+      </div>
+      <div class="card">
+        <div class="imgbox"><img src="plaque.png" alt="NFC-табличка на стол"></div>
+        <div class="name">Табличка на стол «Google Review»</div>
+        <div class="price">20 €</div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feat"><div class="ic">⭐</div><div><b>Отзыв за 10 секунд</b><span>Одно касание — и клиент уже на странице отзыва</span></div></div>
+      <div class="feat"><div class="ic">📈</div><div><b>Выше в Google Картах</b><span>Свежие отзывы поднимают вас в поиске — новые клиенты находят вас первыми</span></div></div>
+      <div class="feat"><div class="ic">📱</div><div><b>Работает с любым смартфоном</b><span>NFC есть в каждом современном телефоне, приложения не нужны</span></div></div>
+      <div class="feat"><div class="ic">🚀</div><div><b>Привезём и настроим</b><span>Доставка по Риге, настройка на вашу страницу Google и демонстрация — бесплатно</span></div></div>
+    </div>
+
+    <a class="cta" href="https://wa.me/37125274672?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20NFC-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D0%BE%D0%B2">💬 Написать в WhatsApp</a>
+
+    <p class="note">Рига и окрестности · Установка в день заказа</p>
+  </div>
+<script>
+  const tg = window.Telegram && window.Telegram.WebApp;
+  if (tg) { tg.ready(); tg.expand(); }
+</script>
+</body>
+</html>
