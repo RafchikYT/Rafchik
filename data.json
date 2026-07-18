@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:52:24.339Z",
+ "updatedAt": "2026-07-18T19:53:24.349Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 23,
+   "sent": 24,
    "no_whatsapp": 8,
-   "new": 3
+   "new": 2
   }
  },
  "leads": [
@@ -28,7 +28,7 @@
    "id": 32,
    "name": "A5 Nail Bar",
    "phone": "37127151075",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
