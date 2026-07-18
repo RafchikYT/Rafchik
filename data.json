@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-18T19:39:24.249Z",
+ "updatedAt": "2026-07-18T19:40:24.252Z",
  "auto": true,
  "stats": {
   "total": 34,
   "byStatus": {
-   "sent": 13,
+   "sent": 14,
    "no_whatsapp": 4,
-   "new": 17
+   "new": 16
   }
  },
  "leads": [
@@ -147,7 +147,7 @@
    "id": 15,
    "name": "One Beauty",
    "phone": "37124937755",
-   "status": "new",
+   "status": "sent",
    "category": "beauty"
   },
   {
