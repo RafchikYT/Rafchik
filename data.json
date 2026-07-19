@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:47:39.662Z",
+ "updatedAt": "2026-07-19T11:48:39.672Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 39,
+   "sent": 40,
    "no_whatsapp": 22,
-   "new": 11
+   "new": 10
   }
  },
  "leads": [
@@ -84,7 +84,7 @@
    "id": 62,
    "name": "Es sieviete",
    "phone": "37129360625",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
