@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:42:39.609Z",
+ "updatedAt": "2026-07-19T11:43:39.618Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 35,
+   "sent": 36,
    "no_whatsapp": 18,
-   "new": 19
+   "new": 18
   }
  },
  "leads": [
@@ -140,7 +140,7 @@
    "id": 54,
    "name": "Salons Kamene",
    "phone": "37128639831",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
