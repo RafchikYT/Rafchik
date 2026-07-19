@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:35:39.567Z",
+ "updatedAt": "2026-07-19T11:36:39.569Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 30,
+   "sent": 31,
    "no_whatsapp": 13,
-   "new": 29
+   "new": 28
   }
  },
  "leads": [
@@ -210,7 +210,7 @@
    "id": 44,
    "name": "Ritas frizētava",
    "phone": "37126371249",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
