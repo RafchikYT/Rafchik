@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:48:39.672Z",
+ "updatedAt": "2026-07-19T11:49:39.683Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 40,
-   "no_whatsapp": 22,
-   "new": 10
+   "sent": 41,
+   "no_whatsapp": 23,
+   "new": 8
   }
  },
  "leads": [
@@ -70,14 +70,14 @@
    "id": 64,
    "name": "52 studija",
    "phone": "37129537770",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 63,
    "name": "Mr. Thomas's Beard",
    "phone": "37127212100",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
