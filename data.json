@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:43:39.618Z",
+ "updatedAt": "2026-07-19T11:44:39.635Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 36,
-   "no_whatsapp": 18,
-   "new": 18
+   "sent": 37,
+   "no_whatsapp": 22,
+   "new": 13
   }
  },
  "leads": [
@@ -105,35 +105,35 @@
    "id": 59,
    "name": "Bordo",
    "phone": "37122819316",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 58,
    "name": "Frizētava",
    "phone": "37122515770",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 57,
    "name": "Bros and Blades",
    "phone": "37120025838",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 56,
    "name": "Fanni-R",
    "phone": "37167627365",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 55,
    "name": "Noble",
    "phone": "37123002839",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
