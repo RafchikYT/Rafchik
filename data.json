@@ -1,12 +1,11 @@
 {
- "updatedAt": "2026-07-19T11:52:39.722Z",
+ "updatedAt": "2026-07-19T11:53:39.730Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 44,
-   "no_whatsapp": 26,
-   "new": 2
+   "sent": 45,
+   "no_whatsapp": 27
   }
  },
  "leads": [
@@ -14,14 +13,14 @@
    "id": 72,
    "name": "Hair Riga",
    "phone": "37120021599",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 71,
    "name": "Hair Monkey Barbershop",
    "phone": "37120032931",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
