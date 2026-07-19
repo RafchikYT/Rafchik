@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:45:39.637Z",
+ "updatedAt": "2026-07-19T11:46:39.645Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 37,
+   "sent": 38,
    "no_whatsapp": 22,
-   "new": 13
+   "new": 12
   }
  },
  "leads": [
@@ -98,7 +98,7 @@
    "id": 60,
    "name": "Hair Port",
    "phone": "37120505511",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
