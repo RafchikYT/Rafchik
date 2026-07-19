@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:38:39.578Z",
+ "updatedAt": "2026-07-19T11:39:39.582Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 32,
+   "sent": 33,
    "no_whatsapp": 14,
-   "new": 26
+   "new": 25
   }
  },
  "leads": [
@@ -189,7 +189,7 @@
    "id": 47,
    "name": "Central Barber Shop",
    "phone": "37128003666",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
