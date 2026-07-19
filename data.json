@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:46:39.645Z",
+ "updatedAt": "2026-07-19T11:47:39.662Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 38,
+   "sent": 39,
    "no_whatsapp": 22,
-   "new": 12
+   "new": 11
   }
  },
  "leads": [
@@ -91,7 +91,7 @@
    "id": 61,
    "name": "rahbarber",
    "phone": "37124422299",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
