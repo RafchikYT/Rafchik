@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:51:39.712Z",
+ "updatedAt": "2026-07-19T11:52:39.722Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 43,
-   "no_whatsapp": 24,
-   "new": 5
+   "sent": 44,
+   "no_whatsapp": 26,
+   "new": 2
   }
  },
  "leads": [
@@ -28,21 +28,21 @@
    "id": 70,
    "name": "Grieze",
    "phone": "37120015220",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 69,
    "name": "Desi Barber",
    "phone": "37122111178",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 68,
    "name": "Gspot",
    "phone": "37120662690",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
