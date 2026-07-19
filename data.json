@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:31:39.527Z",
+ "updatedAt": "2026-07-19T11:32:39.543Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 27,
+   "sent": 28,
    "no_whatsapp": 12,
-   "new": 33
+   "new": 32
   }
  },
  "leads": [
@@ -238,7 +238,7 @@
    "id": 40,
    "name": "Melnais knābis",
    "phone": "37126061248",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
