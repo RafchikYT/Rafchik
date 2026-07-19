@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:37:39.573Z",
+ "updatedAt": "2026-07-19T11:38:39.578Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 31,
-   "no_whatsapp": 13,
-   "new": 28
+   "sent": 32,
+   "no_whatsapp": 14,
+   "new": 26
   }
  },
  "leads": [
@@ -196,14 +196,14 @@
    "id": 46,
    "name": "Skaistumkopšanas salons \"Paradīze\"",
    "phone": "37125268083",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 45,
    "name": "Ma-Beauty",
    "phone": "37126218441",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
