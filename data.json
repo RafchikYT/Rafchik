@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:29:39.507Z",
+ "updatedAt": "2026-07-19T11:30:39.520Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 26,
-   "no_whatsapp": 9,
-   "new": 37
+   "sent": 27,
+   "no_whatsapp": 12,
+   "new": 33
   }
  },
  "leads": [
@@ -245,28 +245,28 @@
    "id": 39,
    "name": "Kowarow's",
    "phone": "37125502590",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 38,
    "name": "Īriss",
    "phone": "37167260139",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 37,
    "name": "Lorta klasika",
    "phone": "37167549502",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 36,
    "name": "NOA",
    "phone": "37167591777",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
