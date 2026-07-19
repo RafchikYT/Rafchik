@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:49:39.683Z",
+ "updatedAt": "2026-07-19T11:50:39.700Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 41,
+   "sent": 42,
    "no_whatsapp": 23,
-   "new": 8
+   "new": 7
   }
  },
  "leads": [
@@ -63,7 +63,7 @@
    "id": 65,
    "name": "Sirinda",
    "phone": "37129546500",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
