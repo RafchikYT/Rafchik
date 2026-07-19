@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:39:39.582Z",
+ "updatedAt": "2026-07-19T11:40:39.587Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 33,
-   "no_whatsapp": 14,
-   "new": 25
+   "sent": 34,
+   "no_whatsapp": 18,
+   "new": 20
   }
  },
  "leads": [
@@ -154,35 +154,35 @@
    "id": 52,
    "name": "Frizierdarbnīca \"Augusts\"",
    "phone": "37120133088",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 51,
    "name": "Ylang skaistumkopšanas salons",
    "phone": "37167211066",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 50,
    "name": "Andrey Silchenko",
    "phone": "37167227398",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 49,
    "name": "Luxadore",
    "phone": "37167627522",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
    "id": 48,
    "name": "Andrey Silchenko",
    "phone": "37167284449",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
