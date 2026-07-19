@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:50:39.700Z",
+ "updatedAt": "2026-07-19T11:51:39.712Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 42,
-   "no_whatsapp": 23,
-   "new": 7
+   "sent": 43,
+   "no_whatsapp": 24,
+   "new": 5
   }
  },
  "leads": [
@@ -49,14 +49,14 @@
    "id": 67,
    "name": "Hair Room",
    "phone": "37128009392",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 66,
    "name": "AO Kolekcija",
    "phone": "37167399135",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
