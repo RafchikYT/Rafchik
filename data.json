@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:34:39.559Z",
+ "updatedAt": "2026-07-19T11:35:39.567Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 29,
+   "sent": 30,
    "no_whatsapp": 13,
-   "new": 30
+   "new": 29
   }
  },
  "leads": [
@@ -217,7 +217,7 @@
    "id": 43,
    "name": "Ilona",
    "phone": "37126704449",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
