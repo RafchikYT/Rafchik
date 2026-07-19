@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:28:39.496Z",
+ "updatedAt": "2026-07-19T11:29:39.507Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 25,
+   "sent": 26,
    "no_whatsapp": 9,
-   "new": 38
+   "new": 37
   }
  },
  "leads": [
@@ -273,7 +273,7 @@
    "id": 35,
    "name": "Asi hairdresser",
    "phone": "37120053338",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
