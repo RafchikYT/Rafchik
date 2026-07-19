@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-19T11:32:39.543Z",
+ "updatedAt": "2026-07-19T11:33:39.542Z",
  "auto": true,
  "stats": {
   "total": 72,
   "byStatus": {
-   "sent": 28,
-   "no_whatsapp": 12,
-   "new": 32
+   "sent": 29,
+   "no_whatsapp": 13,
+   "new": 30
   }
  },
  "leads": [
@@ -224,14 +224,14 @@
    "id": 42,
    "name": "Kristīnes frizētava",
    "phone": "37129688198",
-   "status": "new",
+   "status": "sent",
    "category": "hairdresser"
   },
   {
    "id": 41,
    "name": "Luksa šarms",
    "phone": "37167552556",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "hairdresser"
   },
   {
