@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:46:30.708Z",
+ "updatedAt": "2026-07-20T14:47:30.721Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
-   "sent": 67,
+   "sent": 68,
    "no_whatsapp": 56,
-   "new": 145
+   "new": 144
   }
  },
  "leads": [
@@ -57,7 +57,7 @@
    "id": 262,
    "name": "Spot Kafé",
    "phone": "37120448811",
-   "status": "new",
+   "status": "sent",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 7
+   "pending": 6
   },
   {
    "id": 1,
