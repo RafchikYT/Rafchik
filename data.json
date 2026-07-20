@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:48:30.732Z",
+ "updatedAt": "2026-07-20T14:49:30.747Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
-   "sent": 68,
-   "no_whatsapp": 56,
-   "new": 144
+   "sent": 69,
+   "no_whatsapp": 57,
+   "new": 142
   }
  },
  "leads": [
@@ -43,14 +43,14 @@
    "id": 264,
    "name": "KwakInn",
    "phone": "37127181609",
-   "status": "new",
+   "status": "sent",
    "category": "bar"
   },
   {
    "id": 263,
    "name": "Tims Mints",
    "phone": "37167223277",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 6
+   "pending": 4
   },
   {
    "id": 1,
