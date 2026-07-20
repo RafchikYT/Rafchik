@@ -1,7 +1,7 @@
 {
- "updatedAt": "2026-07-20T14:56:30.821Z",
- "auto": true,
- "autoBatchId": 2,
+ "updatedAt": "2026-07-20T14:57:30.832Z",
+ "auto": false,
+ "autoBatchId": null,
  "stats": {
   "total": 268,
   "byStatus": {
