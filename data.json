@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:45:30.694Z",
+ "updatedAt": "2026-07-20T14:46:30.708Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
-   "sent": 66,
-   "no_whatsapp": 53,
-   "new": 149
+   "sent": 67,
+   "no_whatsapp": 56,
+   "new": 145
   }
  },
  "leads": [
@@ -64,28 +64,28 @@
    "id": 261,
    "name": "Kiwi Bar",
    "phone": "37127705466",
-   "status": "new",
+   "status": "sent",
    "category": "bar"
   },
   {
    "id": 260,
    "name": "Sidrērija",
    "phone": "37125745299",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "bar"
   },
   {
    "id": 259,
    "name": "Aka Latviešu virtuve",
    "phone": "37167880898",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "bar"
   },
   {
    "id": 258,
    "name": "Blues House",
    "phone": "37124553797",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 11
+   "pending": 7
   },
   {
    "id": 1,
