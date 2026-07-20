@@ -40,7 +40,7 @@
   .d1 { animation-delay: 0.03s; } .d2 { animation-delay: 0.10s; }
   .d3 { animation-delay: 0.17s; } .d4 { animation-delay: 0.24s; }
   .d5 { animation-delay: 0.31s; } .d6 { animation-delay: 0.38s; }
-  .d7 { animation-delay: 0.45s; }
+  .d7 { animation-delay: 0.45s; } .d8 { animation-delay: 0.52s; }
   @media (prefers-reduced-motion: reduce) { .in { animation: none; opacity: 1; } }
 
   header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -204,6 +204,11 @@
   </section>
 
   <section class="in d5">
+    <h2>Поиски <span class="meta" id="searchCount"></span></h2>
+    <div class="list" id="searches"><div class="empty">Загружаю…</div></div>
+  </section>
+
+  <section class="in d6">
     <h2>Поиск бизнесов в Риге</h2>
     <div class="row">
       <select id="cat">
@@ -236,7 +241,7 @@
     </div>
   </section>
 
-  <section class="in d6">
+  <section class="in d7">
     <h2>Отправить лиду</h2>
     <div class="row">
       <input id="leadId" type="number" inputmode="numeric" placeholder="Номер лида, напр. 3">
@@ -245,7 +250,7 @@
     <p class="hint">Уйдёт сообщение с фото и ценами в WhatsApp этого лида.</p>
   </section>
 
-  <section class="in d7">
+  <section class="in d8">
     <h2>Задачи для Claude</h2>
     <div class="list" id="tasks" style="max-height:220px"><div class="empty">Загружаю…</div></div>
     <textarea id="task" style="margin-top:10px" placeholder="Новая задача — Claude выполнит и отчитается в чат"></textarea>
@@ -324,6 +329,20 @@
           (t.result ? `<div class="rs">↳ ${esc(t.result)}</div>` : '') + `</div></div>`
         ).join('')
       : '<div class="empty">Задач пока нет</div>';
+
+    const srch = d.searches || [];
+    document.getElementById('searchCount').textContent = srch.length ? `${srch.length} последних` : '';
+    document.getElementById('searches').innerHTML = srch.length
+      ? srch.map((s) => {
+          const running = d.auto && Number(d.autoBatchId) === Number(s.id);
+          const btn = s.pending
+            ? `<button class="send" style="padding:8px 12px;font-size:12px" onclick="cmd('auto','on-${s.id}')">${running ? '⏳ идёт' : '▶ разослать'}</button>`
+            : `<span style="font-size:11px;color:var(--faint)">готово</span>`;
+          return `<div class="lead"><span class="em">📌</span>` +
+            `<div style="min-width:0"><div class="nm">#${s.id} ${esc(s.label)}</div><div class="ph">${s.count} найдено · ${s.pending} не отправлено</div></div>` +
+            btn + `</div>`;
+        }).join('')
+      : '<div class="empty">Поисков пока не было</div>';
   }
 
   refresh();
