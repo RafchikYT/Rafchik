@@ -337,9 +337,10 @@
           const running = d.auto && Number(d.autoBatchId) === Number(s.id);
           const btn = s.pending
             ? `<button class="send" style="padding:8px 12px;font-size:12px" onclick="cmd('auto','on-${s.id}')">${running ? '⏳ идёт' : '▶ разослать'}</button>`
-            : `<span style="font-size:11px;color:var(--faint)">готово</span>`;
+            : `<span style="font-size:11px;color:var(--faint)">${s.added === 0 ? 'все уже были' : 'отправлено'}</span>`;
+          const addedTxt = s.added === null ? '' : ` · новых: ${s.added}`;
           return `<div class="lead"><span class="em">📌</span>` +
-            `<div style="min-width:0"><div class="nm">#${s.id} ${esc(s.label)}</div><div class="ph">${s.count} найдено · ${s.pending} не отправлено</div></div>` +
+            `<div style="min-width:0"><div class="nm">#${s.id} ${esc(s.label)}</div><div class="ph">${s.count} найдено${addedTxt} · ${s.pending} не отправлено</div></div>` +
             btn + `</div>`;
         }).join('')
       : '<div class="empty">Поисков пока не было</div>';
