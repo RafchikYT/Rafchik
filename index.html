@@ -335,9 +335,10 @@
     document.getElementById('searches').innerHTML = srch.length
       ? srch.map((s) => {
           const running = d.auto && Number(d.autoBatchId) === Number(s.id);
+          const doneLabel = s.added === 0 ? 'все уже были' : s.added === null ? 'старый поиск' : 'отправлено';
           const btn = s.pending
             ? `<button class="send" style="padding:8px 12px;font-size:12px" onclick="cmd('auto','on-${s.id}')">${running ? '⏳ идёт' : '▶ разослать'}</button>`
-            : `<span style="font-size:11px;color:var(--faint)">${s.added === 0 ? 'все уже были' : 'отправлено'}</span>`;
+            : `<span style="font-size:11px;color:var(--faint)">${doneLabel}</span>`;
           const addedTxt = s.added === null ? '' : ` · новых: ${s.added}`;
           return `<div class="lead"><span class="em">📌</span>` +
             `<div style="min-width:0"><div class="nm">#${s.id} ${esc(s.label)}</div><div class="ph">${s.count} найдено${addedTxt} · ${s.pending} не отправлено</div></div>` +
