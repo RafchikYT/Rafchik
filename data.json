@@ -1,16 +1,114 @@
 {
- "updatedAt": "2026-07-20T14:44:30.689Z",
- "auto": false,
- "autoBatchId": null,
+ "updatedAt": "2026-07-20T14:45:30.694Z",
+ "auto": true,
+ "autoBatchId": 2,
  "stats": {
-  "total": 254,
+  "total": 268,
   "byStatus": {
-   "sent": 65,
-   "no_whatsapp": 51,
-   "new": 138
+   "sent": 66,
+   "no_whatsapp": 53,
+   "new": 149
   }
  },
  "leads": [
+  {
+   "id": 268,
+   "name": "Black Magic",
+   "phone": "37167222877",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 267,
+   "name": "MyBeer / Mans alus",
+   "phone": "37129606222",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 266,
+   "name": "Distillers Republic",
+   "phone": "37129726236",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 265,
+   "name": "Hookah Place Riga",
+   "phone": "37125757071",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 264,
+   "name": "KwakInn",
+   "phone": "37127181609",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 263,
+   "name": "Tims Mints",
+   "phone": "37167223277",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 262,
+   "name": "Spot Kafé",
+   "phone": "37120448811",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 261,
+   "name": "Kiwi Bar",
+   "phone": "37127705466",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 260,
+   "name": "Sidrērija",
+   "phone": "37125745299",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 259,
+   "name": "Aka Latviešu virtuve",
+   "phone": "37167880898",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 258,
+   "name": "Blues House",
+   "phone": "37124553797",
+   "status": "new",
+   "category": "bar"
+  },
+  {
+   "id": 257,
+   "name": "DJ bārs",
+   "phone": "37128296689",
+   "status": "sent",
+   "category": "bar"
+  },
+  {
+   "id": 256,
+   "name": "Piana Vyshnia",
+   "phone": "37122332841",
+   "status": "no_whatsapp",
+   "category": "bar"
+  },
+  {
+   "id": 255,
+   "name": "Franču bārs",
+   "phone": "37167399675",
+   "status": "no_whatsapp",
+   "category": "bar"
+  },
   {
    "id": 254,
    "name": "9 drakoni",
@@ -612,104 +710,6 @@
    "phone": "37129277391",
    "status": "new",
    "category": "restaurant"
-  },
-  {
-   "id": 168,
-   "name": "Naples",
-   "phone": "37125775540",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 167,
-   "name": "Mio",
-   "phone": "37128143139",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 166,
-   "name": "Tresor Grill",
-   "phone": "37122113501",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 165,
-   "name": "Banana Leaf",
-   "phone": "37128909000",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 164,
-   "name": "Panna",
-   "phone": "37120003894",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 163,
-   "name": "Lido Origo",
-   "phone": "37127823316",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 162,
-   "name": "Ogle",
-   "phone": "37122722287",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 161,
-   "name": "Lido",
-   "phone": "37126510303",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 160,
-   "name": "Fei-Fei",
-   "phone": "3716663388",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 159,
-   "name": "Gan Bei",
-   "phone": "37129502005",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 158,
-   "name": "Laba Pica",
-   "phone": "37120010080",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 157,
-   "name": "Mēle",
-   "phone": "37128244454",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 156,
-   "name": "Uno Sushi",
-   "phone": "37125901803",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 155,
-   "name": "Ferma",
-   "phone": "37122009000",
-   "status": "new",
-   "category": "restaurant"
   }
  ],
  "tasks": [
@@ -785,6 +785,13 @@
   }
  ],
  "searches": [
+  {
+   "id": 2,
+   "label": "Бары · Старый город (Вецрига)",
+   "count": 14,
+   "added": 14,
+   "pending": 11
+  },
   {
    "id": 1,
    "label": "Рестораны · Старый город (Вецрига)",
