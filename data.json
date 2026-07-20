@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:49:30.747Z",
+ "updatedAt": "2026-07-20T14:50:30.752Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
-   "sent": 69,
+   "sent": 70,
    "no_whatsapp": 57,
-   "new": 142
+   "new": 141
   }
  },
  "leads": [
@@ -36,7 +36,7 @@
    "id": 265,
    "name": "Hookah Place Riga",
    "phone": "37125757071",
-   "status": "new",
+   "status": "sent",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 4
+   "pending": 3
   },
   {
    "id": 1,
