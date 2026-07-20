@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-07-20T13:13:57.291Z",
+ "updatedAt": "2026-07-20T13:14:26.625Z",
  "auto": false,
  "autoBatchId": null,
  "stats": {
@@ -789,6 +789,7 @@
    "id": 1,
    "label": "Рестораны · Старый город (Вецрига)",
    "count": 41,
+   "added": null,
    "pending": 0
   }
  ]
