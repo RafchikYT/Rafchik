@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-07-20T12:35:36.571Z",
+ "updatedAt": "2026-07-20T12:36:36.586Z",
  "auto": true,
  "stats": {
   "total": 254,
   "byStatus": {
-   "sent": 50,
-   "no_whatsapp": 30,
-   "new": 174
+   "sent": 51,
+   "no_whatsapp": 31,
+   "new": 172
   }
  },
  "leads": [
