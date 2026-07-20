@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:54:30.799Z",
+ "updatedAt": "2026-07-20T14:55:30.813Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
    "sent": 72,
-   "no_whatsapp": 57,
-   "new": 139
+   "no_whatsapp": 58,
+   "new": 138
   }
  },
  "leads": [
@@ -15,7 +15,7 @@
    "id": 268,
    "name": "Black Magic",
    "phone": "37167222877",
-   "status": "new",
+   "status": "no_whatsapp",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 1
+   "pending": 0
   },
   {
    "id": 1,
