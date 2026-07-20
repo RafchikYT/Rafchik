@@ -224,7 +224,15 @@
         <option value="pharmacy">💊 Аптеки</option>
         <option value="clothes">👕 Магазины одежды</option>
       </select>
-      <button class="send" onclick="cmd('search', document.getElementById('cat').value)">Искать</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <select id="zone">
+        <option value="riga">🗺 Вся Рига</option>
+        <option value="oldtown">🏰 Старый город</option>
+        <option value="centre">🚉 Центр (вокзал)</option>
+        <option value="agenskalns">🌉 Агенскалнс</option>
+      </select>
+      <button class="send" onclick="cmd('search', document.getElementById('cat').value + ' ' + document.getElementById('zone').value)">Искать</button>
     </div>
   </section>
 
@@ -323,7 +331,8 @@
 
   // ---------- отправка команд боту ----------
   function deepLinkPayload(p) {
-    let s = p.cmd + (p.arg ? '__' + String(p.arg) : '');
+    const arg = String(p.arg || '').trim().replace(/\s+/g, '-'); // пробел -> дефис, т.к. deep-link не пропускает пробелы
+    let s = p.cmd + (arg ? '__' + arg : '');
     s = s.replace(/[^A-Za-z0-9_-]/g, '');
     return s.slice(0, 64);
   }
