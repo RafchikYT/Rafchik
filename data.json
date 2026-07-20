@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-20T14:51:30.765Z",
+ "updatedAt": "2026-07-20T14:52:30.780Z",
  "auto": true,
  "autoBatchId": 2,
  "stats": {
   "total": 268,
   "byStatus": {
-   "sent": 70,
+   "sent": 71,
    "no_whatsapp": 57,
-   "new": 141
+   "new": 140
   }
  },
  "leads": [
@@ -29,7 +29,7 @@
    "id": 266,
    "name": "Distillers Republic",
    "phone": "37129726236",
-   "status": "new",
+   "status": "sent",
    "category": "bar"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Бары · Старый город (Вецрига)",
    "count": 14,
    "added": 14,
-   "pending": 3
+   "pending": 2
   },
   {
    "id": 1,
