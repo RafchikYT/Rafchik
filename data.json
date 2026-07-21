@@ -1,16 +1,233 @@
 {
- "updatedAt": "2026-07-21T07:36:39.667Z",
- "auto": false,
- "autoBatchId": null,
+ "updatedAt": "2026-07-21T07:37:39.685Z",
+ "auto": true,
+ "autoBatchId": 4,
  "stats": {
-  "total": 268,
+  "total": 299,
   "byStatus": {
-   "sent": 72,
-   "no_whatsapp": 58,
-   "new": 138
+   "sent": 73,
+   "no_whatsapp": 59,
+   "new": 167
   }
  },
  "leads": [
+  {
+   "id": 299,
+   "name": "Tējo",
+   "phone": "37127330055",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 298,
+   "name": "Caffiano",
+   "phone": "37124222888",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 297,
+   "name": "LIVI cafe",
+   "phone": "37120509080",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 296,
+   "name": "Pippa Waffles",
+   "phone": "37126161160",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 295,
+   "name": "Kotoffski. Cat cafe",
+   "phone": "37124245405",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 294,
+   "name": "Mr. Bļinčiks",
+   "phone": "37124962267",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 293,
+   "name": "Conta specialty coffee",
+   "phone": "37127275531",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 292,
+   "name": "Mīkla",
+   "phone": "37125778333",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 291,
+   "name": "Ezīša kofīšops",
+   "phone": "37127994764",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 290,
+   "name": "Bezē",
+   "phone": "37122033883",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 289,
+   "name": "Runa Tearoom",
+   "phone": "37129266920",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 288,
+   "name": "Mazā Terapija",
+   "phone": "37120370090",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 287,
+   "name": "Zvaigzne Cafe",
+   "phone": "37125422333",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 286,
+   "name": "Deli Dose",
+   "phone": "37120580500",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 285,
+   "name": "Strada",
+   "phone": "37126238885",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 284,
+   "name": "Innocent",
+   "phone": "37129349507",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 283,
+   "name": "Caffeine",
+   "phone": "37127757343",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 282,
+   "name": "Caffeine",
+   "phone": "37129106706",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 281,
+   "name": "Crumble Cake",
+   "phone": "37129147071",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 280,
+   "name": "Golden Coffee",
+   "phone": "37167220502",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 279,
+   "name": "Firss",
+   "phone": "37129268390",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 278,
+   "name": "KALVE Espresso Room",
+   "phone": "37125755575",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 277,
+   "name": "Čili pica",
+   "phone": "37126623937",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 276,
+   "name": "Mākonis",
+   "phone": "37129765445",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 275,
+   "name": "Cuba coffee room",
+   "phone": "37127822984",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 274,
+   "name": "Sviesta pika",
+   "phone": "37126140633",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 273,
+   "name": "Latvijas pirmā rokkafejnīca",
+   "phone": "37126678555",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 272,
+   "name": "MiiT Coffee",
+   "phone": "37127292424",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 271,
+   "name": "Cadets de Gascogne",
+   "phone": "37126192741",
+   "status": "new",
+   "category": "cafe"
+  },
+  {
+   "id": 270,
+   "name": "Cafeterius",
+   "phone": "37129692263",
+   "status": "sent",
+   "category": "cafe"
+  },
+  {
+   "id": 269,
+   "name": "V. Ķuzes kafejnīca",
+   "phone": "37167322943",
+   "status": "no_whatsapp",
+   "category": "cafe"
+  },
   {
    "id": 268,
    "name": "Black Magic",
@@ -493,223 +710,6 @@
    "phone": "37126648683",
    "status": "new",
    "category": "restaurant"
-  },
-  {
-   "id": 199,
-   "name": "Bangers",
-   "phone": "37125651295",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 198,
-   "name": "Chat",
-   "phone": "37125729739",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 197,
-   "name": "Sushi Meistars",
-   "phone": "37120320203",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 196,
-   "name": "Senās Tradicijas",
-   "phone": "37127811754",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 195,
-   "name": "Steaks",
-   "phone": "37125477744",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 194,
-   "name": "Kozy Eats",
-   "phone": "37127383833",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 193,
-   "name": "BambooK Ocean",
-   "phone": "37122000015",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 192,
-   "name": "Motopica",
-   "phone": "37129750750",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 191,
-   "name": "Gan Bei",
-   "phone": "37167455550",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 190,
-   "name": "Two More Beers",
-   "phone": "37128622422",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 189,
-   "name": "sushibars.lv",
-   "phone": "37127611622",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 188,
-   "name": "Space Falafel",
-   "phone": "37127366166",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 187,
-   "name": "2 Eat",
-   "phone": "37126225920",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 186,
-   "name": "Snob",
-   "phone": "37160008606",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 185,
-   "name": "SuVide",
-   "phone": "37125759066",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 184,
-   "name": "Sushi express",
-   "phone": "37129721448",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 183,
-   "name": "Singh's",
-   "phone": "37163311999",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 182,
-   "name": "Lielais Ķīnas mūris",
-   "phone": "37127897158",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 181,
-   "name": "Milo Cafe",
-   "phone": "37125781718",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 180,
-   "name": "Wok n Kurry",
-   "phone": "37167496818",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 179,
-   "name": "8 Lounge",
-   "phone": "37123222888",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 178,
-   "name": "Paprika",
-   "phone": "37122070700",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 177,
-   "name": "Burger Corner",
-   "phone": "37165975217",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 176,
-   "name": "LOWINE",
-   "phone": "37120609996",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 175,
-   "name": "Ikos olivia",
-   "phone": "37127338866",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 174,
-   "name": "TRE Riga",
-   "phone": "37128307080",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 173,
-   "name": "Piazza Italiana",
-   "phone": "37125665665",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 172,
-   "name": "Rossini",
-   "phone": "37167334497",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 171,
-   "name": "The Catch",
-   "phone": "37127770091",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 170,
-   "name": "Chef's Corner",
-   "phone": "37127001101",
-   "status": "new",
-   "category": "restaurant"
-  },
-  {
-   "id": 169,
-   "name": "Mr Fox",
-   "phone": "37129277391",
-   "status": "new",
-   "category": "restaurant"
   }
  ],
  "tasks": [
@@ -785,6 +785,13 @@
   }
  ],
  "searches": [
+  {
+   "id": 4,
+   "label": "Кафе · Центр (вокруг ж/д вокзала)",
+   "count": 34,
+   "added": 31,
+   "pending": 29
+  },
   {
    "id": 3,
    "label": "Рестораны · Старый город (Вецрига)",
