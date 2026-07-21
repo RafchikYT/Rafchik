@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-07-21T07:37:39.685Z",
- "auto": true,
- "autoBatchId": 4,
+ "updatedAt": "2026-07-21T07:39:55.292Z",
+ "auto": false,
+ "autoBatchId": null,
  "stats": {
   "total": 299,
   "byStatus": {
-   "sent": 73,
+   "sent": 74,
    "no_whatsapp": 59,
-   "new": 167
+   "new": 166
   }
  },
  "leads": [
@@ -211,7 +211,7 @@
    "id": 271,
    "name": "Cadets de Gascogne",
    "phone": "37126192741",
-   "status": "new",
+   "status": "sent",
    "category": "cafe"
   },
   {
@@ -790,7 +790,7 @@
    "label": "Кафе · Центр (вокруг ж/д вокзала)",
    "count": 34,
    "added": 31,
-   "pending": 29
+   "pending": 28
   },
   {
    "id": 3,
